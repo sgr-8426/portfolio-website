@@ -1,68 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --transition-duration: 300ms;
+  --secondary-50: #fdf4ff;
+  --secondary-100: #fae8ff;
+  --secondary-200: #f5d0fe;
+  --secondary-300: #f0abfc;
+  --secondary-400: #e879f9;
+  --secondary-500: #d946ef;
+  --secondary-600: #c026d3;
+  --secondary-700: #a21caf;
+  --secondary-800: #86198f;
+  --secondary-900: #701a75;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
-  a:hover {
-    color: #747bff;
+
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+.theme-transition {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.nav-icon {
+  @apply w-6 h-6 transition-transform duration-200 ease-in-out hover:scale-110;
+}
+
+.nav-icon:hover {
+  transform: scale(1.1);
+}
+
+.page-container {
+  @apply container mx-auto px-4 py-8;
+}  .section-title {
+    @apply text-3xl font-bold mb-6 text-primary-600;
+    background: linear-gradient(to right, var(--primary-600), var(--primary-400));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
+
+.button-primary {
+  @apply px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg
+         shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200
+         focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900;
+}
+
+.button-primary:hover {
+  background-color: var(--primary-700);
+}
+
+.button-secondary {
+  @apply px-6 py-3 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700
+         text-gray-900 dark:text-white font-medium rounded-lg transition-all duration-200;
+}
+
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl p-6
+         transition-all duration-300 border border-gray-100 dark:border-gray-700;
+}
+
+.dark .card {
+  background-color: rgb(31, 41, 55);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--primary-600), var(--primary-400));
+}
+
+.glass-effect {
+  @apply backdrop-blur-md bg-white/80 dark:bg-gray-800/80;
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
 }
