@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import DarkModeToggle from 'react-dark-mode-toggle';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -22,12 +22,13 @@ const ThemeToggle = () => {
   }, [isDarkMode]);
 
   return (
-    <div className="fixed top-4 right-4 z-50">
-      <DarkModeToggle
-        onChange={setIsDarkMode}
+    <div className="fixed top-4 left-4 z-50">
+      <DarkModeSwitch
         checked={isDarkMode}
-        size={60}
-        className="shadow-lg"
+        onChange={setIsDarkMode}
+        size={40}
+        sunColor="#fbbf24"
+        moonColor="#0ea5e9"
       />
     </div>
   );
