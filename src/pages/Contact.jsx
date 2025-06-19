@@ -132,7 +132,7 @@ const Contact = () => {
             <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">
               Send me a Message
             </h2>
-              <form action='https://formsubmit.co/sagarnarigara69@gmail.com' method='POST' className="space-y-4">
+              <form action='https://formspree.io/f/xqabpqde' method='POST' className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   Name
