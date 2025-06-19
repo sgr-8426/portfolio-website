@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/portfolio-website/', // <-- Set base to match GitHub Pages repo
+  base: '/portfolio-website/', 
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -16,7 +16,7 @@ export default defineConfig({
       },
     },
     chunkSizeWarningLimit: 1000,
-    assetsInlineLimit: 10000, // Inline assets < 10kb
+    assetsInlineLimit: 10000,
     cssCodeSplit: true,
     minify: 'terser',
     terserOptions: {

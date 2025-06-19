@@ -57,14 +57,15 @@ const ProjectCard = ({ project }) => {
         ))}
       </div>
       
-      <div className="flex space-x-4">              <a
+      <div className="flex space-x-4">              
+                {/* <a
                   href={project.liveDemo}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button-primary text-sm"
                 >
                   Live Demo →
-                </a>
+                </a> */}
                 <a
                   href={project.githubRepo}
                   target="_blank"
