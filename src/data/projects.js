@@ -4,7 +4,7 @@ export const projects = [
     title: "StudyBud - an online learning platform",
     description: "A full-stack online learning platform built with PHP and SQL. Features include user authentication, ",
     techStack: ["HTML", "CSS", "JS", "PHP", "SQL"],
-    imageUrl: "/my-portfolio/images/ecommerce.png",
+    imageUrl: "public/images/studybud.png",
     liveDemo: "/NoPage",
     githubRepo: "https://github.com/Team-SB-288/StudyBud-learning-platform",
   },

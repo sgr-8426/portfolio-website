@@ -11,7 +11,7 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/sagar-narigara-534436323/",
     // twitter: "https://twitter.com/johndoe",
   },
-  resumeLink: "/resume.pdf", // Add your resume PDF to the public folder
+  resumeLink: "/portfolio-website/resume.pdf", // Add your resume PDF to the public folder
   interests: [
     "Coding",
     "Building Whatever Comes to Mind",

@@ -9,16 +9,6 @@ const Contact = () => {
     message: '',
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // This is a static form - no actual submission
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
-    // Show success message
-    alert('Thank you for your message! This is a demo form.');
-  };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -142,7 +132,7 @@ const Contact = () => {
             <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">
               Send me a Message
             </h2>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form action='https://formsubmit.co/sagarnarigara69@gmail.com' method='POST' className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   Name
