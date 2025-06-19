@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { HomeIcon, UserIcon, FolderIcon, AcademicCapIcon, 
          DocumentCheckIcon, CodeBracketIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
-
+import ThemeToggle from './ThemeToggle';
 const navItems = [
   { path: '/', icon: HomeIcon, label: 'Home' },
   { path: '/about', icon: UserIcon, label: 'About' },
@@ -17,8 +17,9 @@ const Navbar = () => {
   const location = useLocation();
   const [isHovered, setIsHovered] = useState(null);
 
-  return (    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in">
-      <div className="glass-effect px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300">
+  return (
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full flex justify-center items-center">
+      <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md px-6 py-3 rounded-full shadow-lg flex items-center gap-4">
         <ul className="flex items-center space-x-6">
           {navItems.map((item) => {
             const Icon = item.icon;
@@ -45,6 +46,7 @@ const Navbar = () => {
             );
           })}
         </ul>
+        <ThemeToggle />
       </div>
     </nav>
   );

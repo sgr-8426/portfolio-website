@@ -22,7 +22,13 @@
   }
 
   body {
-    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white;
+    background-color: #f9fafb;
+    color: #18181b;
+  }
+
+  body.dark {
+    background-color: #18181b;
+    color: #f9fafb;
   }
 }
 
@@ -33,56 +39,130 @@
 }
 
 .nav-icon {
-  @apply w-6 h-6 transition-transform duration-200 ease-in-out hover:scale-110;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition-property: transform;
+  transition-duration: var(--transition-duration);
+  color: #64748b;
+}
+
+.dark .nav-icon {
+  color: #d1d5db;
 }
 
 .nav-icon:hover {
   transform: scale(1.1);
+  color: #0ea5e9;
+}
+
+.dark .nav-icon:hover {
+  color: #38bdf8;
 }
 
 .page-container {
-  @apply container mx-auto px-4 py-8;
-}  .section-title {
-    @apply text-3xl font-bold mb-6 text-primary-600;
-    background: linear-gradient(to right, var(--primary-600), var(--primary-400));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1rem;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background-image: linear-gradient(to right, #0284c7, #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dark .section-title {
+  background-image: linear-gradient(to right, #38bdf8, #0ea5e9);
+}
 
 .button-primary {
-  @apply px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg
-         shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200
-         focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900;
+  background-color: #0284c7;
+  color: #fff;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  transition: background-color var(--transition-duration), box-shadow var(--transition-duration);
+  border: none;
+  outline: none;
 }
 
 .button-primary:hover {
-  background-color: var(--primary-700);
+  background-color: #0369a1;
+}
+
+.dark .button-primary {
+  background-color: #38bdf8;
+  color: #18181b;
+}
+
+.dark .button-primary:hover {
+  background-color: #0ea5e9;
 }
 
 .button-secondary {
-  @apply px-6 py-3 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700
-         text-gray-900 dark:text-white font-medium rounded-lg transition-all duration-200;
+  background-color: #e5e7eb;
+  color: #18181b;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color var(--transition-duration);
+  border: none;
+  outline: none;
+}
+
+.button-secondary:hover {
+  background-color: #d1d5db;
+}
+
+.dark .button-secondary {
+  background-color: #334155;
+  color: #f9fafb;
+}
+
+.dark .button-secondary:hover {
+  background-color: #1e293b;
 }
 
 .card {
-  @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl p-6
-         transition-all duration-300 border border-gray-100 dark:border-gray-700;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  padding: 1.5rem;
+  transition: box-shadow var(--transition-duration);
+  border: 1px solid #f3f4f6;
 }
 
 .dark .card {
-  background-color: rgb(31, 41, 55);
+  background-color: #1f2937;
+  border-color: #374151;
 }
 
 .text-gradient {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, var(--primary-600), var(--primary-400));
+  background-image: linear-gradient(to right, #0284c7, #38bdf8);
+}
+
+.dark .text-gradient {
+  background-image: linear-gradient(to right, #38bdf8, #0ea5e9);
 }
 
 .glass-effect {
-  @apply backdrop-blur-md bg-white/80 dark:bg-gray-800/80;
+  backdrop-filter: blur(8px);
+  background-color: rgba(255,255,255,0.8);
+}
+
+.dark .glass-effect {
+  background-color: rgba(31,41,55,0.8);
 }
 
 @layer utilities {
@@ -104,6 +184,7 @@
       transform: translateY(20px);
       opacity: 0;
     }
+
     to {
       transform: translateY(0);
       opacity: 1;

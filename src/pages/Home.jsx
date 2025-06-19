@@ -2,9 +2,10 @@ import { personalInfo } from '../data/personalInfo';
 
 const Home = () => {
   return (
-    <div className="page-container flex items-center justify-center min-h-[calc(100vh-6rem)]">      <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl">
+    <div className="page-container flex items-center justify-center min-h-[calc(100vh-6rem)] md:min-h-[calc(100vh-6rem)] h-[calc(100vh-6rem)]">
+      <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl">
         <div className="md:w-1/2 text-center md:text-left">
-          <h1 className="text-5xl font-bold mb-4 heading-gradient animate-fade-in">
+          <h1 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-primary-200 animate-fade-in">
             {personalInfo.name}
           </h1>
           <h2 className="text-2xl text-gray-600 dark:text-gray-300 mb-4 animate-slide-up">
@@ -40,10 +41,10 @@ const Home = () => {
         <div className="md:w-1/2 flex justify-center">
           <div className="relative">
             <div className="w-64 h-64 rounded-full overflow-hidden ring-4 ring-primary-500 ring-offset-4 ring-offset-gray-50 dark:ring-offset-gray-900">              <img
-                src={`${import.meta.env.BASE_URL}images/profile.jpg`}
-                alt={personalInfo.name}
-                className="w-full h-full object-cover"
-              />
+              src={`${import.meta.env.BASE_URL}images/profile.jpg`}
+              alt={personalInfo.name}
+              className="w-full h-full object-cover"
+            />
             </div>
             <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white dark:bg-gray-800 px-6 py-2 rounded-full shadow-lg">
               <div className="flex space-x-4">

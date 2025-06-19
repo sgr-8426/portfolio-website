@@ -22,11 +22,11 @@ const ThemeToggle = () => {
   }, [isDarkMode]);
 
   return (
-    <div className="fixed top-4 left-4 z-50">
+    <div className="ml-2">
       <DarkModeSwitch
         checked={isDarkMode}
         onChange={setIsDarkMode}
-        size={40}
+        size={32}
         sunColor="#fbbf24"
         moonColor="#0ea5e9"
       />

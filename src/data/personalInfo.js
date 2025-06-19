@@ -1,47 +1,77 @@
 export const personalInfo = {
-  name: "John Doe",
-  title: "Full Stack Developer",
-  tagline: "Crafting digital experiences with passion and precision",
-  email: "john.doe@example.com",
-  location: "San Francisco, CA",
-  phone: "+1 (555) 123-4567",
-  bio: `Passionate full-stack developer with a keen eye for design and a love for creating seamless user experiences. 
-  Specializing in modern web technologies and always eager to learn and adapt to new challenges.`,
+  name: "Sagar Narigara",
+  title: "Backend Developer",
+  tagline: "Part-time gamer, full-time techie. I chase high scores in both code and combat.",
+  email: "sagarnarigara69@gmail.com",
+  location: "Bhavnagar, Gujarat, India",
+  phone: "+91 7984376805",
+  bio: `I’m a passionate IT student with a love for building creative and efficient digital experiences. I specialize in front-end development, currently focusing on React, Tailwind CSS, and modern JavaScript. Whether it’s designing smooth user interfaces or exploring backend logic, I enjoy solving real-world problems through code. I’m constantly learning, experimenting, and growing—with the goal of becoming a full-stack developer who can craft applications from idea to deployment. Let’s build something awesome together.`,
   socialLinks: {
-    github: "https://github.com/johndoe",
-    linkedin: "https://linkedin.com/in/johndoe",
-    twitter: "https://twitter.com/johndoe",
+    github: "https://github.com/sgr-8426",
+    linkedin: "https://www.linkedin.com/in/sagar-narigara-534436323/",
+    // twitter: "https://twitter.com/johndoe",
   },
   resumeLink: "/resume.pdf", // Add your resume PDF to the public folder
+  interests: [
+    "Coding",
+    "Building Whatever Comes to Mind",
+    "Video Gaming",
+    "Exploring New Technologies",
+    
+  ]
 };
 
 export const education = [
   {
-    school: "University of Technology",
-    degree: "Bachelor of Science in Computer Science",
-    year: "2020-2024",
-    description: "Focus on Software Engineering and Web Technologies",
+    school: "Gujarat Technological University",
+    degree: "Bachelor of Engineering in Information Technology",
+    year: "2022-2026",
+    stype: "CGPA: ",
+    score: "7.78/10"
+    // description: "Focus on Software Engineering and Web Technologies",
+  },
+  {
+    school: "Shree Zaverchand Meghani High School",
+    degree: "Higher Secondary School",
+    year: "March 2022",
+    stype: "Percentage: ",
+    score: "56.8 %"
+    // description: "Focus on Software Engineering and Web Technologies",
+  },
+  {
+    school: "Shree Zaverchand Meghani High School",
+    degree: "Secondary School",
+    year: "March 2020",
+    stype: "Percentage: ",
+    score: "66.8 %"
+    // description: "Focus on Software Engineering and Web Technologies",
   },
 ];
 
 export const certifications = [
-  {
-    title: "AWS Certified Developer",
-    issuer: "Amazon Web Services",
-    date: "2024",
-    credentialLink: "https://aws.amazon.com/certification/certified-developer-associate/",
-  },
-  {
-    title: "React Development Certification",
-    issuer: "Meta",
-    date: "2023",
-    credentialLink: "https://www.meta.com/certificates/react",
-  },
+  // {
+  //   title: "AWS Certified Developer",
+  //   issuer: "Amazon Web Services",
+  //   date: "2024",
+  //   credentialLink: "https://aws.amazon.com/certification/certified-developer-associate/",
+  // },
+  // {
+  //   title: "Google IT Support Professional Certificate",
+  //   issuer: "Google/Coursera",
+  //   date: "2023",
+  //   credentialLink: "https://www.coursera.org/account/accomplishments/certificate/EXAMPLE",
+  // },
+  // {
+  //   title: "Microsoft Azure Fundamentals",
+  //   issuer: "Microsoft",
+  //   date: "2022",
+  //   credentialLink: "https://www.microsoft.com/en-us/learning/certification-overview.aspx",
+  // }
 ];
 
 export const skills = {
-  languages: ["JavaScript", "TypeScript", "Python", "SQL", "HTML5", "CSS3"],
-  frameworks: ["React", "Node.js", "Express.js", "Next.js", "TailwindCSS"],
-  tools: ["Git", "Docker", "AWS", "MongoDB", "PostgreSQL", "VS Code"],
-  softSkills: ["Problem Solving", "Team Collaboration", "Communication", "Agile Methodology"],
+  languages: ["JavaScript", "Python", "SQL", "HTML5", "CSS3", "Java", "PHP"],
+  frameworks: ["React", "Flask", "Express", "Tailwind CSS", "AngularJS"],
+  tools: ["Git", "GitHub", "MongoDB", "VS Code"],
+  softSkills: ["Problem Solving", "Team Collaboration", "Communication"],
 };
