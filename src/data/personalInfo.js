@@ -11,13 +11,12 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/sagar-narigara-534436323/",
     // twitter: "https://twitter.com/johndoe",
   },
-  resumeLink: "/portfolio-website/resume.pdf", // Add your resume PDF to the public folder
+  resumeLink: "/portfolio-website/resume.pdf",
   interests: [
     "Coding",
     "Building Whatever Comes to Mind",
     "Video Gaming",
     "Exploring New Technologies",
-    
   ]
 };
 
@@ -70,8 +69,8 @@ export const certifications = [
 ];
 
 export const skills = {
-  languages: ["JavaScript", "Python", "SQL", "HTML5", "CSS3", "Java", "PHP"],
-  frameworks: ["React", "Flask", "Express", "Tailwind CSS", "AngularJS"],
+  languages: ["JavaScript", "Python", "HTML5", "CSS3", "PHP"],
+  frameworks: ["React", "Flask", "Express", "Tailwind CSS"],
   tools: ["Git", "GitHub", "MongoDB", "VS Code"],
   softSkills: ["Problem Solving", "Team Collaboration", "Communication"],
 };
